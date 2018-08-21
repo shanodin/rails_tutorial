@@ -1,0 +1,7 @@
+<h1>Editing Room</h1>
+
+<%= form_for @room do |f|%>
+    <%= f.label :room_number%>
+    <%= f.number_field :room_number, :value => @room.room_number %>
+    <%= f.submit %>
+<%end%>

@@ -1,0 +1,18 @@
+<h1><strong>Room Number:</strong><%= @room.number %></h1>
+
+<%= room_edit_button(room)%>
+
+
+<p>Current Residents:</p>
+
+<%if @in_room.length > 0 %>
+    <% @in_room.each do |resident|%>
+        <p><%= resident.name%></p>
+            <%= resident_view_button(resident)%>
+            <%= resident_edit_button(resident)%>
+            <%= resident_delete_button(resident)%>
+    <%end%>
+<%else%>
+    <p>No Residents</p>
+    <%= new_resident_button() %>
+<%end%>

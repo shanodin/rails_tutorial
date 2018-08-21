@@ -1,0 +1,11 @@
+<h1>Editing Resident</h1>
+
+<%= form_for @resident do |f|%>
+    <%= f.label :name%>
+    <%= f.text_field :name, :value => @resident.name %>
+    <%= f.label :age%>
+    <%= f.number_field :age, :value => @resident.age %>
+    <%= f.label :room_id %>
+    <%= f.select :room_id, options_for_select(@all_rooms)%>
+    <%= f.submit %>
+<%end%>
